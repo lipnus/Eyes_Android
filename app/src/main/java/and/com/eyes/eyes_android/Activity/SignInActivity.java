@@ -24,6 +24,7 @@ public class SignInActivity extends Activity {
         binding.setActivity(this);
     }
 
+
     public void sendData(){
         Call<String> call = RetrofitClient.getInstance().getService().sendPost("a", "b","c");
         call.enqueue(new Callback<String>() {
