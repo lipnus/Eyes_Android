@@ -2,7 +2,7 @@ package and.com.eyes.eyes_android.Network;
 
 import java.util.List;
 
-import ndc.and.template.Model.UserVO;
+import and.com.eyes.eyes_android.Model.UserVO;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import okhttp3.ResponseBody;

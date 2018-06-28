@@ -2,7 +2,6 @@ package and.com.eyes.eyes_android.Activity;
 
 import android.Manifest;
 import android.app.Activity;
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
@@ -16,19 +15,15 @@ import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-import ndc.and.template.R;
-import ndc.and.template.databinding.ActivityImageBinding;
+import and.com.eyes.eyes_android.R;
 
 public class ImageActivity extends Activity {
 
-    private ActivityImageBinding binding;
     private String state;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_image);
-        binding.setActivity(this);
 
         PermissionListener permissionlistener = new PermissionListener() {
             @Override
