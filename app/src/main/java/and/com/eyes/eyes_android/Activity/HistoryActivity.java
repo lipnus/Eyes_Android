@@ -18,11 +18,11 @@ public class HistoryActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
         overridePendingTransition(0, 0);
+/*
+        // 위젯과 멤버변수 참조 획득
+        //mListView = (ListView)findViewById(R.id.historyList);
 
-        /* 위젯과 멤버변수 참조 획득 */
-        mListView = (ListView)findViewById(R.id.historyList);
-
-        /* 아이템 추가 및 어댑터 등록 */
+        // 아이템 추가 및 어댑터 등록
         dataSetting();
     }
 
@@ -36,8 +36,8 @@ public class HistoryActivity extends Activity {
                     "endTime_" + i,"handover");
         }
 
-        /* 리스트뷰에 어댑터 등록 */
-        mListView.setAdapter(mMyAdapter);
-    }
+        // 리스트뷰에 어댑터 등록
+        mListView.setAdapter(mMyAdapter);*/
 
+    }
 }
