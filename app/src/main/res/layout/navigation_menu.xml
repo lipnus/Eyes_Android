@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
-    <data>
-        <variable
-            name="activity"
-            type="and.com.eyes.eyes_android.Activity.MainActivity"/>
-    </data>
 
     <!--네비게이션 바-->
     <LinearLayout
@@ -19,7 +14,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="사진등록"
-            android:onClick="@{handlers::onClickFriend}"/>
+            android:onClick="onClick_reg"/>
 
         <Button
             android:id="@+id/btnHis"
