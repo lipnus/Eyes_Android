@@ -14,7 +14,7 @@
         android:text="프로필 리스트" />
 
     <ListView
-        android:id="@+id/listView"
+        android:id="@+id/historyList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/textView"
