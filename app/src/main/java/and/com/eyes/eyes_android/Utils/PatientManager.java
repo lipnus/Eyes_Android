@@ -10,16 +10,17 @@ import and.com.eyes.eyes_android.Model.PatientVO;
 
 import static android.content.Context.MODE_PRIVATE;
 
-public class UserManager {
-    private static UserManager instance;
+public class PatientManager {
+    private static PatientManager instance;
     private PatientVO patientVO;
-    public UserManager() {
-        
+
+    public PatientManager() {
+
     }
 
-    public static UserManager getInstance() {
+    public static PatientManager getInstance() {
         if (instance == null) {
-            instance = new UserManager();
+            instance = new PatientManager();
         }
         return instance;
     }
@@ -36,16 +37,21 @@ public class UserManager {
         editor.commit(); //완료한다.
     }
 
-    public PatientVO loadPatient(Context context){
+    public PatientVO loadPatient(Context context) {
         SharedPreferences sp = context.getSharedPreferences("shared", MODE_PRIVATE);
         Gson gson = new GsonBuilder().create();
 
         String strPatient = sp.getString("patient", "");
-        PatientVO patientVO = gson.fromJson(strPatient, PatientVO.class);
+        this.patientVO = gson.fromJson(strPatient, PatientVO.class);
         return patientVO;
-
     }
 
+    public PatientVO getPatientVO() {
+        return patientVO;
+    }
 
+    public void setPatientVO(PatientVO patientVO) {
+        this.patientVO = patientVO;
+    }
 
 }

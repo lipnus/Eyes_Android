@@ -2,6 +2,7 @@ package and.com.eyes.eyes_android.Network;
 
 import java.util.List;
 
+import and.com.eyes.eyes_android.Model.HistoryItem;
 import and.com.eyes.eyes_android.Model.PatientVO;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
@@ -24,6 +25,14 @@ public interface RetrofitService {
     Call<PatientVO> getPatient(
             @Field("userId") String userId
     );
+
+    @POST("/getHistories")
+    @FormUrlEncoded
+    Call<List<HistoryItem>> getHistories(
+            @Field("patientId") String patientId
+    );
+
+
 
     //File Should be sended Through MultiPart and POST
     @POST("/sendImage")

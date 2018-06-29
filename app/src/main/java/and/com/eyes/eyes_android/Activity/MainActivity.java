@@ -2,16 +2,16 @@ package and.com.eyes.eyes_android.Activity;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
-import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.view.View;
 
 import and.com.eyes.eyes_android.Model.PatientVO;
 import and.com.eyes.eyes_android.Network.RetrofitClient;
 import and.com.eyes.eyes_android.R;
 import and.com.eyes.eyes_android.Utils.DLog;
+import and.com.eyes.eyes_android.Utils.PatientManager;
 import and.com.eyes.eyes_android.databinding.ActivityMainBinding;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -50,6 +50,12 @@ public class MainActivity extends Activity {
                 // you  will get the reponse in the response parameter
                 if (response.isSuccessful()) {
                     patientVO = response.body();
+                    if(patientVO == null){
+                        patientVO = PatientManager.getInstance().loadPatient(getApplicationContext());
+                    }else{
+                        PatientManager.getInstance().setPatientVO(patientVO);
+                        PatientManager.getInstance().savePatient(getApplicationContext(), patientVO);
+                    }
                     //Binding으로 PatientVO 설정해줘야함
                 } else {
                     DLog.getInstance().e("Main Activity");
