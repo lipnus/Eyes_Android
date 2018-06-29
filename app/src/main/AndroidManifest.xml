@@ -19,7 +19,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-         <activity android:name=".Activity.YoutubeActivity"></activity>
         <!--<activity android:name=".Activity.PhotoEnrollActivity"></activity>-->
     </application>
 

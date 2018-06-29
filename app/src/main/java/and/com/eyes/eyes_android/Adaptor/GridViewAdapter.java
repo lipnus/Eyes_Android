@@ -53,7 +53,7 @@ public class GridViewAdapter extends BaseAdapter {
 
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.gridview_photoenroll, parent, false);
+            convertView = inflater.inflate(R.layout.girdview_photoenroll, parent, false);
         }
 
         //레이아웃
