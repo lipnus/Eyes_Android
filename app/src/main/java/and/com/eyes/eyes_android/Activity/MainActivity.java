@@ -22,6 +22,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         binding.setActivity(this);
+        overridePendingTransition(0, 0);
 
         /*
         binding.btnReg.setOnClickListener(new View.OnClickListener() {
