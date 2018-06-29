@@ -49,6 +49,7 @@ public class MainActivity extends Activity {
             public void onResponse(Call<PatientVO> call, Response<PatientVO> response) {
                 // you  will get the reponse in the response parameter
                 if (response.isSuccessful()) {
+                    patientVO = response.body();
                     //Binding으로 PatientVO 설정해줘야함
                 } else {
                     DLog.getInstance().e("Main Activity");

@@ -1,7 +1,6 @@
 package and.com.eyes.eyes_android.Adaptor;
 
 import android.content.Context;
-import android.content.Intent;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +13,7 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
+import and.com.eyes.eyes_android.Model.GridViewItem;
 import and.com.eyes.eyes_android.R;
 
 

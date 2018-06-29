@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="Adapter"
+            type="and.com.eyes.eyes_android.Adaptor.HistoryAdapter">
+        </variable>
+    </data>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -48,3 +55,4 @@
     </LinearLayout>
 
 </LinearLayout>
+</layout>

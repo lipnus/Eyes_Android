@@ -1,14 +1,21 @@
-package and.com.eyes.eyes_android.Adaptor;
+package and.com.eyes.eyes_android.Model;
 
 import android.graphics.drawable.Drawable;
 
 public class HistoryItem {
 
     private Drawable icon;
-    private String address;
-    private String developTIme;
+    private String startTime;
     private String endTIme;
+    private String address;
     private String handover;
+
+    public HistoryItem(String address, String startTime, String endTime, String handover){
+        this.address = address;
+        this.startTime = startTime;
+        this.endTIme = endTime;
+        this.handover = handover;
+    }
 
     public Drawable getIcon() {
         return icon;
@@ -26,12 +33,12 @@ public class HistoryItem {
         this.address = address;
     }
 
-    public String getDevelopTIme() {
-        return developTIme;
+    public String getStartTime() {
+        return startTime;
     }
 
-    public void setDevelopTIme(String developTIme) {
-        this.developTIme = developTIme;
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
     }
 
     public String getEndTIme() {

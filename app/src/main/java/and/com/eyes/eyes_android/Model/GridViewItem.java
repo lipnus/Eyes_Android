@@ -1,4 +1,4 @@
-package and.com.eyes.eyes_android.Adaptor;
+package and.com.eyes.eyes_android.Model;
 
 import android.content.Intent;
 import android.net.Uri;

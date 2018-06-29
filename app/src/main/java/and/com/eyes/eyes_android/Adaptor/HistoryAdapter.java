@@ -1,24 +1,26 @@
 package and.com.eyes.eyes_android.Adaptor;
 
 import android.content.Context;
+import android.databinding.DataBindingUtil;
 import android.graphics.drawable.Drawable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import and.com.eyes.eyes_android.Model.HistoryItem;
 import and.com.eyes.eyes_android.R;
+import and.com.eyes.eyes_android.databinding.HistoryCustomBinding;
 
 public class HistoryAdapter extends BaseAdapter{
 
     /* 아이템을 세트로 담기 위한 어레이 */
     private ArrayList<HistoryItem> Items = new ArrayList<>();
+    //private HistoryCustomBinding binding;
 
     @Override
     public int getCount() {
@@ -59,7 +61,7 @@ public class HistoryAdapter extends BaseAdapter{
         /* 각 위젯에 세팅된 아이템을 뿌려준다 */
         iv_img.setImageDrawable(myItem.getIcon());
         tv_address.setText(myItem.getAddress());
-        tv_developTime.setText(myItem.getDevelopTIme());
+        tv_developTime.setText(myItem.getStartTime());
         tv_endTime.setText(myItem.getEndTIme());
         tv_handover.setText(myItem.getHandover());
 
@@ -70,14 +72,14 @@ public class HistoryAdapter extends BaseAdapter{
     }
 
     /* 아이템 데이터 추가를 위한 함수. 자신이 원하는대로 작성 */
-    public void addItem(Drawable img, String address, String developTIme, String endTime, String handover) {
+    public void addItem(Drawable img, String address, String startTime, String endTime, String handover) {
 
-        HistoryItem mItem = new HistoryItem();
+        HistoryItem mItem = new HistoryItem(address, startTime, endTime, handover);
 
         /* MyItem에 아이템을 setting한다. */
         mItem.setIcon(img);
         mItem.setAddress(address);
-        mItem.setDevelopTIme(developTIme);
+        mItem.setStartTime(startTime);
         mItem.setEndTIme(endTime);
         mItem.setHandover(handover);
 
