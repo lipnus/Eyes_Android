@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.util.Log;
 
 import and.com.eyes.eyes_android.Network.RetrofitClient;
@@ -48,8 +49,12 @@ public class SignInActivity extends Activity {
     }
 
     public void moveActivity(){
-        Intent intent = new Intent(SignInActivity.this, ImageActivity.class);
+        Intent intent = new Intent(SignInActivity.this, PhotoEnrollActivity.class);
         startActivity(intent);
+    }
+
+    public void captureImage(){
+
     }
 
 
