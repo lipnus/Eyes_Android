@@ -32,7 +32,7 @@ public class ImageActivity extends Activity {
 
                 checkExternalStorage();
 
-                String data = "파일 생성내용....";
+                String data = "파일 생성내용...."; //ㅁㅁ
 
                 try {
                     File path = Environment.getExternalStoragePublicDirectory
