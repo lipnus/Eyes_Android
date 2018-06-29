@@ -21,8 +21,8 @@ public class YoutubeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_youtube);
 
+
         youTubePlayerView = findViewById(R.id.youtube_player_view);
-        youtubePath = "https://youtu.be/aR8Fe1lTKHo";
 
 
         //영상처리
