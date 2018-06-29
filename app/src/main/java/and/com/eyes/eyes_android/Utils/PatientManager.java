@@ -42,7 +42,7 @@ public class PatientManager {
         Gson gson = new GsonBuilder().create();
 
         String strPatient = sp.getString("patient", "");
-        this.patientVO = gson.fromJson(strPatient, PatientVO.class);
+        patientVO = gson.fromJson(strPatient, PatientVO.class);
         return patientVO;
     }
 
