@@ -1,42 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <!--네비게이션 바-->
-    <LinearLayout
+    <data>
+        <variable
+            name="navigation"
+            type="and.com.eyes.eyes_android.Adaptor.NavigationBar"/>
+    </data>
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#909090"
-        android:layout_gravity="bottom">
+        android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/btnReg"
-            android:layout_width="wrap_content"
+        <ImageView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="사진등록"
-            android:onClick="onClick_reg"/>
+            android:adjustViewBounds="true"
+            android:src="@drawable/low_bar" />
+        <!--네비게이션 바-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btnHis"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="히스토리" />
+            <ImageButton
+                android:id="@+id/btn_main"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/home_icon"
+                android:onClick="@{()->navigation.gotoMain()}"/>
 
-        <Button
-            android:id="@+id/btnCall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="신고" />
+            <ImageButton
+                android:id="@+id/btn_Reg"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/pic_icon2"
+                android:onClick="@{()->navigation.gotoReg()}"/>
 
-        <Button
-            android:id="@+id/btnMain"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="메인" />
-    </LinearLayout>
+            <ImageButton
+                android:id="@+id/btn_History"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/girog_icon3"
+                android:onClick="@{()->navigation.gotoHistory()}"/>
 
+            <ImageButton
+                android:id="@+id/btn_Notify"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/warn_icon4"
+                android:onClick="@{()->navigation.gotoNotify()}"/>
+        </LinearLayout>
 
+    </FrameLayout>
 </layout>

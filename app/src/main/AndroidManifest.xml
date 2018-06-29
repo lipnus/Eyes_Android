@@ -21,7 +21,11 @@
             </intent-filter>
         </activity>
         <!-- <activity android:name=".Activity.PhotoEnrollActivity"></activity> -->
+        <activity android:name=".Activity.MainActivity"></activity>
         <activity android:name=".Activity.CalActivity"></activity>
+        <activity android:name=".Activity.HistoryActivity"></activity>
+        <activity android:name=".Activity.PhotoEnrollActivity"></activity>
+        <activity android:name=".Activity.SignInActivity"></activity>
     </application>
 
 </manifest>

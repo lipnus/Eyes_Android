@@ -23,7 +23,7 @@ public class MainActivity extends Activity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         binding.setActivity(this);
 
-
+        /*
         binding.btnReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,7 +61,7 @@ public class MainActivity extends Activity {
             }
         });
 
-
+        */
 
     }
 }

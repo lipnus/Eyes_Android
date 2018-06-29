@@ -25,6 +25,7 @@
                 android:layout_gravity="center"
                 android:onClick="@{()->activity.moveActivity()}"
                 />
+
         </LinearLayout>
     </LinearLayout>
 </layout>

@@ -17,6 +17,7 @@ public class HistoryActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
+        overridePendingTransition(0, 0);
 
         /* 위젯과 멤버변수 참조 획득 */
         mListView = (ListView)findViewById(R.id.historyList);
