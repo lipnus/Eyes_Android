@@ -3,5 +3,8 @@
     <item
         android:drawable="@drawable/icon_history"
         android:duration="300"/>
+    <item
+        android:drawable="@drawable/icon_history_off"
+        android:duration="300"/>
 
 </selector>

@@ -4,8 +4,12 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+
+import com.bumptech.glide.load.engine.Resource;
 
 import and.com.eyes.eyes_android.R;
 import and.com.eyes.eyes_android.databinding.ActivityMainBinding;
