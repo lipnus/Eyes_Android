@@ -31,13 +31,10 @@ public class MainActivity extends Activity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         binding.setActivity(this);
     }
-
-
     @Override
     protected void onStart() {
         super.onStart();
         getPatient();
-
     }
 
     private void getPatient() {
@@ -68,7 +65,6 @@ public class MainActivity extends Activity {
             }
         });
     }
-
 
         /*
         binding.btnReg.setOnClickListener(new View.OnClickListener() {

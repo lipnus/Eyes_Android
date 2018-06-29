@@ -27,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/home_icon"
+                android:src="@drawable/icon_home"
                 android:onClick="@{()->navigation.gotoMain()}"/>
 
             <ImageButton
@@ -37,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/pic_icon2"
+                android:src="@drawable/icon_pic"
                 android:onClick="@{()->navigation.gotoReg()}"/>
 
             <ImageButton
@@ -47,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/girog_icon3"
+                android:src="@drawable/icon_history"
                 android:onClick="@{()->navigation.gotoHistory()}"/>
 
             <ImageButton
@@ -57,7 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/warn_icon4"
+                android:src="@drawable/icon_warn"
                 android:onClick="@{()->navigation.gotoNotify()}"/>
         </LinearLayout>
 

@@ -1,51 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".Activity.PhotoEnrollActivity">
 
-    <TextView
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="정확도"/>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="activity"
+            type="and.com.eyes.eyes_android.Activity.MainActivity"/>
+    </data>
 
-    <ProgressBar
-        android:id="@+id/phto_progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:layout_centerHorizontal="true"
-        android:progressTint="#684e8c"
-        android:max="100" />
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom">
 
-    <TextView
-        android:layout_gravity=""
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="다각도의 사진을 올려주세요. \n 표정이 다양할수록 좋습니다."
-        />
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".Activity.PhotoEnrollActivity">
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="정확도"/>
+
+            <ProgressBar
+                android:id="@+id/phto_progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_centerHorizontal="true"
+                android:progressTint="#684e8c"
+                android:max="100" />
+
+            <TextView
+                android:layout_gravity=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="다각도의 사진을 올려주세요. \n 표정이 다양할수록 좋습니다."/>
 
 
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:id="@+id/testIv"/>
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/testIv"/>
 
-    <GridView
-        android:id="@+id/gridView"
+            <GridView
+                android:id="@+id/gridView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:columnWidth="100dp"
+                android:drawSelectorOnTop="true"
+                android:gravity="center"
+                android:numColumns="auto_fit"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="5dp"
+                android:focusable="true"
+                android:clickable="true"/>
+
+        </LinearLayout>
+
+        <and.com.eyes.eyes_android.Adaptor.NavigationBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:columnWidth="100dp"
-        android:drawSelectorOnTop="true"
-        android:gravity="center"
-        android:numColumns="auto_fit"
-        android:stretchMode="columnWidth"
-        android:verticalSpacing="5dp"
-        android:focusable="true"
-        android:clickable="true"/>
+        android:layout_gravity="bottom"/>
 
-</LinearLayout>
+
+    </FrameLayout>
+</layout>
