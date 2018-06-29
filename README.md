@@ -35,4 +35,4 @@
 #### 실행 설명
 치매환자가 실종 상황에대해 신속한 후속조치가 가능해지게 됩니다.
 
-![](/Eyes_Android/img.jpg)
+![img](./Eyes_Android/img.jpg)
