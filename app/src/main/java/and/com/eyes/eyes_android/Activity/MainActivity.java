@@ -33,6 +33,35 @@ public class MainActivity extends Activity {
     }
 
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        getPatient();
+
+    }
+
+    private void getPatient() {
+        String userId = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
+
+        Call<PatientVO> call = RetrofitClient.getInstance().getService().getPatient(userId);//, patientId);
+        call.enqueue(new Callback<PatientVO>() {
+            @Override
+            public void onResponse(Call<PatientVO> call, Response<PatientVO> response) {
+                // you  will get the reponse in the response parameter
+                if (response.isSuccessful()) {
+                    //Binding으로 PatientVO 설정해줘야함
+                } else {
+                    DLog.getInstance().e("Main Activity");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<PatientVO> call, Throwable t) {
+                DLog.getInstance().e("Main Activity");
+            }
+        });
+    }
+
 
         /*
         binding.btnReg.setOnClickListener(new View.OnClickListener() {
