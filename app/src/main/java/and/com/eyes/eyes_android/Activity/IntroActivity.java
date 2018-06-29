@@ -17,6 +17,7 @@ public class IntroActivity extends Activity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_intro);
         binding.setActivity(this);
+        overridePendingTransition(0, 0);
     }
 
     public void startApplication(){

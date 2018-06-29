@@ -31,6 +31,7 @@ public class PhotoEnrollActivity extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_photo_enroll);
+        overridePendingTransition(0, 0);
 
 
         //테스트용 ImageView
