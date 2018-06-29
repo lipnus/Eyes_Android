@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -18,6 +19,7 @@ public class PhotoEnrollActivity extends AppCompatActivity {
 
     GridView gridView;
     GridViewAdapter adapter;
+    ProgressBar progressBar;
 
     //이미지 업로드
     private static final int GALLERY_INTENT = 2;
@@ -38,6 +40,10 @@ public class PhotoEnrollActivity extends AppCompatActivity {
 
         //그리드뷰 설정
         settingGridView();
+
+        //프로그래스바
+        progressBar = findViewById(R.id.phto_progressBar);
+        progressBar.setProgress(50);
     }
 
     //그리드뷰 설정
@@ -63,8 +69,6 @@ public class PhotoEnrollActivity extends AppCompatActivity {
             }
         });
 
-        //ㅁㄴㅇㄹ
-
         //그리드뷰 빈칸 추가
         for(int i=0; i<15; i++){
             adapter.addItem(i, ""+i);
@@ -80,7 +84,7 @@ public class PhotoEnrollActivity extends AppCompatActivity {
 
         if (requestCode == GALLERY_INTENT && resultCode == RESULT_OK) {
 
-            try {
+            try{
 
                 //이미지뷰에 고른 사진을 보여줌
                 Glide.with(this)
@@ -91,10 +95,9 @@ public class PhotoEnrollActivity extends AppCompatActivity {
                 adapter.setImage( data.getData(), gridPosition);
                 adapter.notifyDataSetChanged();
 
-            } catch (Exception e) {
+            }catch (Exception e) {
                 e.printStackTrace();
             }
         }//if
-
     }
 }
