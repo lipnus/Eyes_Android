@@ -26,9 +26,7 @@ public class HistoryAdapter extends BaseAdapter{
     }
 
     @Override
-    public HistoryItem getItem(int position) {
-        return Items.get(position);
-    }
+    public HistoryItem getItem(int position) {  return Items.get(position); }
 
     @Override
     public long getItemId(int position) {

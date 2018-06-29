@@ -54,7 +54,6 @@
                 android:text="통계"
                 android:background="@drawable/border" />
 
-
         </LinearLayout>
 
         <and.com.eyes.eyes_android.Adaptor.NavigationBar

@@ -75,6 +75,7 @@ public class NavigationBar extends RelativeLayout {
     }
 
     public void gotoReg(){
+        binding.btnReg.getResources().getDrawable(android.R.drawable.checkbox_off_background);
         String activityName = getActivityName();
         if(!activityName.equals("Activity.PhotoEnrollActivity")) {
             Intent intent = new Intent(getContext(), PhotoEnrollActivity.class);

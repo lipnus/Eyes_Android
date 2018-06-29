@@ -14,51 +14,100 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:src="@drawable/low_bar" />
+
         <!--네비게이션 바-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
 
-            <ImageButton
-                android:id="@+id/btn_main"
-                android:scaleType="fitCenter"
-                android:background="@android:color/transparent"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:src="@drawable/icon_home"
-                android:onClick="@{()->navigation.gotoMain()}"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/btn_Reg"
-                android:scaleType="fitCenter"
-                android:background="@android:color/transparent"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:src="@drawable/icon_pic"
-                android:onClick="@{()->navigation.gotoReg()}"/>
+                <ImageButton
+                    android:id="@+id/btn_main"
+                    android:padding="4dp"
+                    android:scaleType="fitCenter"
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/icon_home"
+                    android:onClick="@{()->navigation.gotoMain()}"/>
 
-            <ImageButton
-                android:id="@+id/btn_History"
-                android:scaleType="fitCenter"
-                android:background="@android:color/transparent"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:src="@drawable/icon_history"
-                android:onClick="@{()->navigation.gotoHistory()}"/>
+                <ImageButton
+                    android:id="@+id/btn_Reg"
+                    android:padding="3dp"
+                    android:scaleType="fitCenter"
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/icon_pic_off"
+                    android:onClick="@{()->navigation.gotoReg()}"/>
 
-            <ImageButton
-                android:id="@+id/btn_Notify"
-                android:scaleType="fitCenter"
-                android:background="@android:color/transparent"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:src="@drawable/icon_warn"
-                android:onClick="@{()->navigation.gotoNotify()}"/>
+                <ImageButton
+                    android:id="@+id/btn_History"
+                    android:padding="3dp"
+                    android:scaleType="fitCenter"
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/icon_history_off"
+                    android:onClick="@{()->navigation.gotoHistory()}"/>
+
+                <ImageButton
+                    android:id="@+id/btn_Notify"
+                    android:padding="3dp"
+                    android:scaleType="fitCenter"
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/icon_warn_off"
+                    android:onClick="@{()->navigation.gotoNotify()}"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="12dp"
+                    android:textAlignment="center"
+                    android:text="홈"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="12dp"
+                    android:textAlignment="center"
+                    android:text="사진 등록"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="12dp"
+                    android:textAlignment="center"
+                    android:text="기록 조회"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="12dp"
+                    android:textAlignment="center"
+                    android:text="신고"/>
+
+            </LinearLayout>
+
         </LinearLayout>
 
     </FrameLayout>
