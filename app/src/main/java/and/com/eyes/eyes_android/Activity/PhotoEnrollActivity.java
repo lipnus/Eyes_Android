@@ -1,10 +1,8 @@
 package and.com.eyes.eyes_android.Activity;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
@@ -12,12 +10,9 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.SimpleTarget;
 
 import and.com.eyes.eyes_android.Adaptor.GridViewAdapter;
 import and.com.eyes.eyes_android.R;
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class PhotoEnrollActivity extends AppCompatActivity {
 
@@ -67,6 +62,8 @@ public class PhotoEnrollActivity extends AppCompatActivity {
 
             }
         });
+
+        //ㅁㄴㅇㄹ
 
         //그리드뷰 빈칸 추가
         for(int i=0; i<15; i++){
