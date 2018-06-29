@@ -3,7 +3,8 @@
     package="and.com.eyes.eyes_android">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <!-- 인터넷권한 -->
     <application
         android:allowBackup="true"
@@ -19,7 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--<activity android:name=".Activity.PhotoEnrollActivity"></activity>-->
+        <!-- <activity android:name=".Activity.PhotoEnrollActivity"></activity> -->
+        <activity android:name=".Activity.CalActivity"></activity>
     </application>
 
 </manifest>
