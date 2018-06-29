@@ -7,7 +7,6 @@ import android.os.Bundle;
 
 import and.com.eyes.eyes_android.R;
 import and.com.eyes.eyes_android.databinding.ActivityIntroBinding;
-import and.com.eyes.eyes_android.databinding.ActivitySigninBinding;
 
 public class IntroActivity extends Activity {
 
@@ -20,7 +19,7 @@ public class IntroActivity extends Activity {
         binding.setActivity(this);
     }
 
-    public void moveActivity(){
+    public void startApplication(){
         Intent intent = new Intent(IntroActivity.this, MainActivity.class);
         startActivity(intent);
     }

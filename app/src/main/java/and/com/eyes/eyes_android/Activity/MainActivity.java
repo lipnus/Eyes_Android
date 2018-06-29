@@ -5,25 +5,36 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.View;
 
+import and.com.eyes.eyes_android.Model.PatientVO;
+import and.com.eyes.eyes_android.Network.RetrofitClient;
 import and.com.eyes.eyes_android.R;
+import and.com.eyes.eyes_android.Utils.DLog;
 import and.com.eyes.eyes_android.databinding.ActivityMainBinding;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class MainActivity extends Activity {
 
     private ActivityMainBinding binding;
+    private PatientVO patientVO;
     private final int PICK_IMAGE = 1;
     private ProgressDialog detectionProgressDialog;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         binding.setActivity(this);
+    }
 
 
+
+        /*
         binding.btnReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,8 +71,7 @@ public class MainActivity extends Activity {
                 finish();
             }
         });
+        */
 
 
-
-    }
 }

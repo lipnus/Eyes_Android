@@ -23,7 +23,7 @@
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
                 android:layout_gravity="center"
-                android:onClick="@{()->activity.moveActivity()}"
+                android:onClick="@{()->activity.startApplication()}"
                 />
         </LinearLayout>
     </LinearLayout>

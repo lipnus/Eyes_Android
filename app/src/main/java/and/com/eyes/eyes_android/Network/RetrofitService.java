@@ -2,7 +2,7 @@ package and.com.eyes.eyes_android.Network;
 
 import java.util.List;
 
-import and.com.eyes.eyes_android.Model.UserVO;
+import and.com.eyes.eyes_android.Model.PatientVO;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
@@ -18,6 +18,12 @@ import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface RetrofitService {
+
+    @POST("/getPatient")
+    @FormUrlEncoded
+    Call<PatientVO> getPatient(
+            @Field("userId") String userId
+    );
 
     //File Should be sended Through MultiPart and POST
     @POST("/sendImage")
@@ -37,14 +43,14 @@ public interface RetrofitService {
 
     //Path will allow to access {owner}
     @GET("/repos/{owner}/{repo}/contributors")
-    Call<List<UserVO>> getUsers(
+    Call<List<PatientVO>> getUsers(
             @Path("owner") String owner,
             @Path("repo") String repo);
 
     //Body was used with POST to send Object
     @POST("/sendUser")
     Call<String> sendUser(
-            @Body UserVO userVO
+            @Body PatientVO patientVO
     );
 
     // Field Must be used with FormUrIEncoded which indicates that the request will have its MIME
