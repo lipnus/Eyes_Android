@@ -1,7 +1,7 @@
 package and.com.eyes.eyes_android.Activity;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -14,7 +14,7 @@ import com.bumptech.glide.Glide;
 import and.com.eyes.eyes_android.Adaptor.GridViewAdapter;
 import and.com.eyes.eyes_android.R;
 
-public class PhotoEnrollActivity extends AppCompatActivity {
+public class PhotoEnrollActivity extends Activity{
 
     GridView gridView;
     GridViewAdapter adapter;

@@ -23,7 +23,13 @@
                 android:src="@drawable/logo"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
+<<<<<<< HEAD
                 android:layout_gravity="center" />
+=======
+                android:layout_gravity="center"
+                android:onClick="@{()->activity.startApplication()}"
+                />
+>>>>>>> a2e906f22813a4e5a9ab4c8e1f64dc836531913e
 
         </LinearLayout>
     </LinearLayout>

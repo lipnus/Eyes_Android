@@ -2,31 +2,69 @@ package and.com.eyes.eyes_android.Activity;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
-import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.databinding.DataBindingUtil;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
+import android.provider.Settings;
 
-import com.bumptech.glide.load.engine.Resource;
-
+import and.com.eyes.eyes_android.Model.PatientVO;
+import and.com.eyes.eyes_android.Network.RetrofitClient;
 import and.com.eyes.eyes_android.R;
+import and.com.eyes.eyes_android.Utils.DLog;
+import and.com.eyes.eyes_android.Utils.PatientManager;
 import and.com.eyes.eyes_android.databinding.ActivityMainBinding;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class MainActivity extends Activity {
 
     private ActivityMainBinding binding;
+    private PatientVO patientVO;
     private final int PICK_IMAGE = 1;
     private ProgressDialog detectionProgressDialog;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         binding.setActivity(this);
-        overridePendingTransition(0, 0);
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        getPatient();
+    }
+
+    private void getPatient() {
+        String userId = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
+
+        Call<PatientVO> call = RetrofitClient.getInstance().getService().getPatient(userId);//, patientId);
+        call.enqueue(new Callback<PatientVO>() {
+            @Override
+            public void onResponse(Call<PatientVO> call, Response<PatientVO> response) {
+                // you  will get the reponse in the response parameter
+                if (response.isSuccessful()) {
+                    patientVO = response.body();
+                    if(patientVO == null){
+                        patientVO = PatientManager.getInstance().loadPatient(getApplicationContext());
+                    }else{
+                        PatientManager.getInstance().setPatientVO(patientVO);
+                        PatientManager.getInstance().savePatient(getApplicationContext(), patientVO);
+                    }
+                    //Binding으로 PatientVO 설정해줘야함
+                } else {
+                    DLog.getInstance().e("Main Activity");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<PatientVO> call, Throwable t) {
+                DLog.getInstance().e("Main Activity");
+            }
+        });
+    }
 
         /*
         binding.btnReg.setOnClickListener(new View.OnClickListener() {
@@ -65,8 +103,7 @@ public class MainActivity extends Activity {
                 finish();
             }
         });
-
         */
 
-    }
+
 }

@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout>
     <data>
         <variable
             name="activity"
-            type="and.com.eyes.eyes_android.Activity.MainActivity"/>
+            type="and.com.eyes.eyes_android.Activity.HistoryActivity">
+        </variable>
     </data>
-
-    <FrameLayout
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="bottom">
+        tools:context="Activity.HistoryActivity">
 
-        <ScrollView
+        <TextView
+            android:gravity="center"
+            android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/history"/>
-        </ScrollView>
+            android:layout_height="wrap_content"
+            android:text="프로필 리스트" />
 
-        <and.com.eyes.eyes_android.Adaptor.NavigationBar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"/>
+        <ListView
+            android:id="@+id/historyList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentStart="true">
+        </ListView>
 
-
-    </FrameLayout>
+    </RelativeLayout>
 </layout>
