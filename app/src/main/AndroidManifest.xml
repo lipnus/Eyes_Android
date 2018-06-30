@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="and.com.eyes.eyes_android">
 
+
+    <meta-data android:name="com.kakao.sdk.AppKey" android:value="525341d4a643ee64ec4766d561a2bd43"/>
+    <uses-permission android:name="android.permission.INTERNET">
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+    </uses-permission>
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -13,19 +19,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.IntroActivity">
+        <activity android:name=".Activity.Map2Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- <activity android:name=".Activity.PhotoEnrollActivity"></activity> -->
-        <activity android:name=".Activity.MainActivity"></activity>
+
+        <activity android:name=".Activity.MainActivity" />
         <activity android:name=".Activity.CalActivity"></activity>
         <activity android:name=".Activity.HistoryActivity"></activity>
         <activity android:name=".Activity.PhotoEnrollActivity"></activity>
-        <activity android:name=".Activity.SignInActivity"></activity>
-    </application>
+        <activity android:name=".Activity.IntroActivity"></activity>
+        </application>
 
 </manifest>

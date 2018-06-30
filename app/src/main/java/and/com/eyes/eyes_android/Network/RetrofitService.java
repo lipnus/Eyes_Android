@@ -3,6 +3,7 @@ package and.com.eyes.eyes_android.Network;
 import java.util.List;
 
 import and.com.eyes.eyes_android.Model.HistoryItem;
+import and.com.eyes.eyes_android.Model.LocationVO;
 import and.com.eyes.eyes_android.Model.PatientVO;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
@@ -71,5 +72,9 @@ public interface RetrofitService {
     Call<String> sendPost(@Field("title") String title,
                           @Field("body") String body,
                           @Field("userId") String uid
+    );
+    @POST("/getLocation")
+    Call<LocationVO> getLocation(
+            @Field("patientId") String patientId
     );
 }
