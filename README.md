@@ -7,7 +7,7 @@
 
 #### 서비스 설명
 실시간 이미지 분석과 탐지를 통한 치매환자 실시간 인식 및 이동 추적 서비스
-
+![img](./1.jpg)
 #### 개발환경
 - <b> 개발환경 : `Windows 10 Redstone`
 - <b> Tool : `Android Studio 3.1.3`, `Visual Studio 2015`, `Adobe Illustrator CS6`, `PyCharm`
